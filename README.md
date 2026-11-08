@@ -36,9 +36,9 @@
 
 ### クラフトと通常操作
 NPC ID113のクラフトメニューで製作します。
-- ironingot_01 ×5
-- titanium_01 ×3
-- glass_01 ×10
+- 鉄インゴット ×5
+- チタニウム ×3
+- ガラス ×10
 - 製作結果: whfd_prototype_00「壁尻（モニター付き）」×1
 
 アイテムを通常どおり設置し、対応NPCをセットして施設の既存操作UIを利用してください。モードと表情は施設状態に追従します。
@@ -85,7 +85,7 @@ Close the game and back up saves. Install the correct BepInEx 5 build, then extr
 For updates, replace the previous WHFD DLL and avoid duplicate copies in other plugin folders. Keep existing user settings and saves. Developer scripts, deployment state, personal JSON files and diagnostics are not required.
 
 ### Crafting / use
-Craft with NPC ID113: ironingot_01 ×5, titanium_01 ×3, glass_01 ×10, producing whfd_prototype_00 ×1. Place it normally, assign a supported NPC and use the existing facility controls.
+Craft with NPC ID113: Iron Ingots ×5, Titanium ×3, Glass ×10, producing whfd_prototype_00 ×1. Place it normally, assign a supported NPC and use the existing facility controls.
 Left Ctrl + Left Alt + F10 selects a nearby monitor. F11 with the same modifiers cannot remove a fixed monitor; the entire facility can still be removed normally. Empty/unsupported assignments do not force NPC video playback.
 The retired whfd_asswall_00 is no longer newly craftable/placeable. Existing saved references remain resolvable and are not deleted or converted.
 
