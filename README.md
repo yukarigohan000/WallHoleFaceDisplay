@@ -1,4 +1,17 @@
-﻿# WallHoleFaceDisplay v0.2.77
+# WallHoleFaceDisplay v0.2.77
+
+<!-- WHFD-SCREENSHOTS-BEGIN -->
+## Screenshots / スクリーンショット
+
+**Five monitors in use / 5台のモニター使用例**
+
+![Five WallHoleFaceDisplay monitors with NPC face screens](images/01-multiple-monitors.png)
+
+| Empty facility / 未使用時の外観 | Crafting menu / クラフト画面 |
+|:---:|:---:|
+| ![WallHoleFaceDisplay facility before assigning an NPC](images/02-empty-facility.png) | ![WallHoleFaceDisplay shown in the crafting menu](images/03-crafting-menu.png) |
+
+<!-- WHFD-SCREENSHOTS-END -->
 
 ## 日本語
 
