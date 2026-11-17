@@ -1,0 +1,7 @@
+{
+  "name": "WallHoleFaceDisplay",
+  "plugin_id": "local.madisland.wallholefacedisplay",
+  "version": "0.2.78",
+  "display_name": "WallHoleFaceDisplay",
+  "success_message": "WallHoleFaceDisplay loaded. Facility registration pending; NPC ID branches unchanged."
+}

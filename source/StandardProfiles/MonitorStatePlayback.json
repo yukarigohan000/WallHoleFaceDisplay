@@ -1,0 +1,11 @@
+{
+  "StandbyPose": "P_restrain",
+  "StandbyFace": "Face_01",
+  "NormalPose": "P_restrain_attach_00",
+  "NormalFace": "Face_01",
+  "FastPose": "P_restrain_attach_01",
+  "FastFace": "Face_02",
+  "FinishPose": "P_restrain_attach_02",
+  "FinishFace": "Face_03",
+  "BlendSeconds": "0.2"
+}

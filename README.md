@@ -1,4 +1,14 @@
-# WallHoleFaceDisplay v0.2.77
+# WallHoleFaceDisplay v0.2.78
+
+
+## v0.2.78 compatibility update / 互換性更新
+
+Targets **Mad Island v0.6.0.4 beta — Steam Build 26719145 (beta_open)**.
+The removed `RandomCharacter.GetBloodSlots()` call is replaced with the game's verified `GetLayeredSlots("blood")` API. The new list retains all 16 previous blood slots and adds `HairFront_blood`. Existing NPC ID44 blood-state handling is preserved; blood is not forcibly enabled or removed regardless of state.
+
+削除された `RandomCharacter.GetBloodSlots()` を、最新版バニラ処理で確認した `GetLayeredSlots("blood")` へ置換しました。旧16スロットに `HairFront_blood` が追加されます。ID44の血状態連動、外観・クラフト・既存設定・保存形式は維持しています。旧ゲーム版や別環境での互換性は未確認です。
+
+Download / ダウンロード: [v0.2.78 release](https://github.com/yukarigohan000/WallHoleFaceDisplay/releases/tag/v0.2.78)
 
 <!-- WHFD-SCREENSHOTS-BEGIN -->
 ## Screenshots / スクリーンショット
@@ -22,7 +32,7 @@
 - Windows版Mad Island、Unity Mono、ゲームに適合したBepInEx 5系。
 - BepInExに付属する0Harmonyと、ゲーム付属のUnity・Spine・TextMeshProを使用します。これらのDLLはこのZIPへ同梱しません。
 - ビルド対象は.NET Framework 4.7.2互換。必要なMono APIを備えるランタイムが必要です。
-- 開発基準はUnity 2021.3.45f2 / Mono、BepInEx 5.4.23.5。v0.2.76までの実機成功環境です。v0.2.77はReleaseビルドと限定した設定・静的チェックまでで、Unity実機確認は未実施です。
+- v0.2.78はMad Island v0.6.0.4 beta、Steam Build 26719145（beta_open）、Unity 2021.3.45f2 / Mono、BepInEx 5.4.23.5でユーザーによる実機確認済みです。起動、クラフト・設置、対応NPC表示、通常・高速・フィニッシュ、表情・ポーズ、複数モニター、設定エディター、セーブ・ロードで問題は見つかっていません。すべての環境・組み合わせで不具合がないことを保証するものではありません。
 - 同じ必要APIを備えた他のBepInEx 5系も想定し、インストール場所・パッチバージョン・ゲームDLLの開発環境ハッシュで起動を拒否しません。ただし、別のBepInEx 5バージョンや別ゲーム更新での実動作は未検証です。
 - BepInEx 6、IL2CPP、Linux/macOS/Wine/Proton、ゲームAPIやアセット構造が大きく違う版は対応保証外です。
 - BepInEx公式資料: https://docs.bepinex.dev/
@@ -64,7 +74,7 @@ EnableDebugUI = true
 ### ログ・既知の制限
 問題時は、利用中のBepInExが出力するLogOutput.log等のログでWallHoleFaceDisplay、MonitorSettings、WHFD_Prototypeを確認してください。BepInExの設定によりファイル名・出力先が異なる場合があります。BepInExの起動エラー、ゲーム/ランタイム/BepInExのバージョン、数値NPC ID、発生操作を添えて報告してください。
 必須API・描画アセットがない場合や、安全にパッチできないネイティブ構造の場合は、該当機能を停止して原因を記録します。ID衝突・実際のデータ不整合の確認は維持します。異なるゲーム更新や、同じ施設・UIを変更する他MODとの組合せは未検証です。利用可能な日本語フォントによって名前の書体が変わることがあります。
-この候補では別環境のUnity実機での起動・描画・保存ロード・複数台動作を保証していません。
+上記以外の環境での起動・描画・保存ロード・複数台動作は未検証です。
 
 ### 削除
 ゲーム終了後にMODのDLLを削除します。ただし、正式施設・旧試作の設置物や所持品が残るセーブは、DLLなしで安全にロードできるとは限りません。削除前にセーブをバックアップし、対象セーブでMOD施設・所持品を通常操作で整理するか、互換DLLを残してください。セーブXMLの手動編集やID変換は行わないでください。設定ファイルの削除は必須ではありません。
@@ -77,7 +87,7 @@ EnableDebugUI = true
 Adds the placeable facility 壁尻（モニター付き） (wall restraint with monitor) to Mad Island. It displays the assigned NPC's appearance/name and follows the facility's existing playback controls. Supported numeric NPC IDs: 15, 16, 17, 44, 90. The monitor is fixed to the facility and shows black when empty. The vanilla gen_asswall_00 is unchanged.
 
 Requires Windows Mad Island using Unity Mono and a suitable BepInEx 5 installation, including its 0Harmony. Uses the game's Unity, Spine and TextMeshPro assemblies; these are not redistributed. Targets the .NET Framework 4.7.2-compatible API surface.
-The development baseline is Unity 2021.3.45f2 / Mono with BepInEx 5.4.23.5; v0.2.76 was tested in-game there. v0.2.77 has build and limited configuration/static checks only, with no Unity in-game verification yet. Other BepInEx 5 builds providing the required APIs are intended, but are not confirmed. There is no exact installation-path, patch-version or developer game-DLL hash gate. BepInEx 6, IL2CPP, other operating systems/runtimes and significantly changed game APIs/assets are not guaranteed.
+v0.2.78 was tested in-game by the developer on Mad Island v0.6.0.4 beta, Steam Build 26719145 (beta_open), Unity 2021.3.45f2 / Mono, and BepInEx 5.4.23.5. Startup, crafting/placement, supported NPC display, normal/fast/finish playback, expressions/poses, independent monitors, the settings editor, and save/load were checked without reported issues. This is not a guarantee of bug-free operation across all environments. Other BepInEx 5 builds providing the required APIs are intended, but are not confirmed. There is no exact installation-path, patch-version or developer game-DLL hash gate. BepInEx 6, IL2CPP, other operating systems/runtimes and significantly changed game APIs/assets are not guaranteed.
 Official BepInEx documentation: https://docs.bepinex.dev/
 
 ### Install / update

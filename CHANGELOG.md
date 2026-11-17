@@ -1,4 +1,13 @@
-﻿# CHANGELOG
+# CHANGELOG
+
+
+## 0.2.78 — 2026-11-18
+- Added compatibility with Mad Island v0.6.0.4 beta, Steam Build 26719145 (beta_open).
+- Replaced removed RandomCharacter.GetBloodSlots() with the verified native GetLayeredSlots("blood") API. It includes all previous 16 blood slots plus HairFront_blood, preserving NPC ID44 state-dependent blood rendering.
+- Retained facility identity, appearance, crafting, embedded defaults, editor controls, playback and save format.
+- Final Release build against the updated game assemblies completed with zero warnings/errors; its DLL is byte-identical to the in-game-tested candidate.
+- Developer in-game verification completed for startup, crafting/placement, NPC IDs 15/16/17/44/90, restraint playback, normal/fast/finish transitions, expressions/poses, independent monitors, settings editor and save/load. No issues were reported in that environment; other environments are not guaranteed.
+- Added a public C# source snapshot. Game assemblies/assets, local settings, saves, diagnostics and deployment history are excluded.
 
 ## 0.2.77
 - Removed the developer game-assembly SHA256 startup gate; retained actual API/patch-shape/asset/ID validation.
